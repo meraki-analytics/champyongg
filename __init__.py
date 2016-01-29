@@ -1,1 +1,1 @@
-from championgg.api import *
+from pygg.api import *

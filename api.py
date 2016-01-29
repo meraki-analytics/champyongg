@@ -1,26 +1,26 @@
-import championgg.requests
-from championgg.common import ChampionGGObject
+import pygg.requests
+from pygg.common import PyGGObject
 
 
 def set_api_key(key):
     """Set your API key
     key    str    the key to use
     """
-    championgg.requests.api_key = key
+    pygg.requests.api_key = key
 
 
 def print_calls(on):
     """Sets whether to print calls to stdout as they are made
     on    bool    the region to query against
     """
-    championgg.requests.print_calls = on
+    pygg.requests.print_calls = on
 
 
 def get_champions():
     """return    http://api.champion.gg/docs/#api-Champion-GetChampions"""
 
     request = 'champion'
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_general_data(champion):
@@ -29,7 +29,7 @@ def get_general_data(champion):
     """
 
     request = 'champion/{name}/general'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_champion_matchups(champion):
@@ -38,7 +38,7 @@ def get_champion_matchups(champion):
     """
 
     request = '/champion/{name}/matchup'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_most_popular_items(champion):
@@ -47,7 +47,7 @@ def get_most_popular_items(champion):
     """
 
     request = '/champion/{name}/items/finished/mostPopular'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_most_popular_skills(champion):
@@ -56,7 +56,7 @@ def get_most_popular_skills(champion):
     """
 
     request = '/champion/{name}/skills/mostPopular'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_most_popular_starter_items(champion):
@@ -65,7 +65,7 @@ def get_most_popular_starter_items(champion):
     """
 
     request = '/champion/{name}/items/starters/mostPopular'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_most_popular_summoners(champion):
@@ -74,7 +74,7 @@ def get_most_popular_summoners(champion):
     """
 
     request = '/champion/{name}/summoners/mostPopular'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_most_winning_items(champion):
@@ -83,7 +83,7 @@ def get_most_winning_items(champion):
     """
 
     request = '/champion/{name}/items/finished/mostWins'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_most_winning_starter_items(champion):
@@ -92,7 +92,7 @@ def get_most_winning_starter_items(champion):
     """
 
     request = '/champion/{name}/items/starters/mostWins'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_most_winning_summoners(champion):
@@ -101,7 +101,7 @@ def get_most_winning_summoners(champion):
     """
 
     request = '/champion/{name}/summoners/mostWins'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_most_popular_runes(champion):
@@ -110,7 +110,7 @@ def get_most_popular_runes(champion):
     """
 
     request = '/champion/{name}/runes/mostPopular'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_most_winning_runes(champion):
@@ -119,7 +119,7 @@ def get_most_winning_runes(champion):
     """
 
     request = '/champion/{name}/runes/mostWins'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_most_winning_skills(champion):
@@ -128,7 +128,7 @@ def get_most_winning_skills(champion):
     """
 
     request = '/champion/{name}/skills/mostWins'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_skills(champion):
@@ -137,7 +137,7 @@ def get_skills(champion):
     """
 
     request = '/champion/{name}/skills'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_skills(champion):
@@ -146,7 +146,7 @@ def get_skills(champion):
     """
 
     request = '/champion/{name}/skills'.format(name=champion)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]
 
 
 def get_skills(champion):
@@ -156,4 +156,4 @@ def get_skills(champion):
     """
 
     request = '/champion/{name}/matchup/{enemy}'.format(name=champion, enemy=enemy)
-    return [ChampionGGObject(datum) for datum in championgg.requests.get(request)]
+    return [PyGGObject(datum) for datum in pygg.requests.get(request)]

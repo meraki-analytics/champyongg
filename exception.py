@@ -1,5 +1,5 @@
-class ChampionGGError(Exception):
-    """Generic exception for a failure within ChampionGG"""
+class PyGGError(Exception):
+    """Generic exception for a failure within PyGG"""
     pass
 
 
