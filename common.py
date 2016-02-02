@@ -1,6 +1,6 @@
 import json
 
-class PyGGObject(object):
+class ChampyonGGObject(object):
     """A Python representation of an object returned by the Champion.gg API"""
 
     def __init__(self, dictionary):
@@ -8,7 +8,7 @@ class PyGGObject(object):
         dictionary    dict    the JSON data returned from the Champion.gg API as a dict
         """
         for k, v in dictionary.items():
-            setattr(self, k, PyGGObject._render(v))
+            setattr(self, k, ChampyonGGObject._render(v))
 
     def _render(obj):
         if isinstance(obj, int) or isinstance(obj, float):
@@ -19,9 +19,9 @@ class PyGGObject(object):
             except:
                 return obj
         elif isinstance(obj, dict):
-            return PyGGObject(obj)
+            return ChampyonGGObject(obj)
         elif isinstance(obj, list):
-            return [PyGGObject._render(v) for v in obj]
+            return [ChampyonGGObject._render(v) for v in obj]
 
 
     def to_json(self, **kwargs):

@@ -1,1 +1,1 @@
-from pygg.api import *
+from champyongg.api import *

@@ -4,7 +4,7 @@ import urllib.error
 import json
 import zlib
 
-from pygg.exception import PyGGError, APIError
+from champyongg.exception import ChampyonGGError, APIError
 
 api_key = ""
 print_calls = False
@@ -17,7 +17,7 @@ def get(request, params={}, include_base=True):
     return          dict              the JSON response from the Champion.gg API as a dict
     """
     if not api_key:
-        raise PyGGError("API Key must be set before the API can be queried.")
+        raise ChampyonGGError("API Key must be set before the API can be queried.")
 
     # Encode params
     params["api_key"] = api_key

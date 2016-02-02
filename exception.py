@@ -1,5 +1,5 @@
-class PyGGError(Exception):
-    """Generic exception for a failure within PyGG"""
+class ChampyonGGError(Exception):
+    """Generic exception for a failure within ChampyonGG"""
     pass
 
 
