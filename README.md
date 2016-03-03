@@ -1,6 +1,6 @@
 ###ChampyonGG
 
-A thin python wrapper for the champion.gg api (api.champion.gg/docs). (Only tested for Python 3)
+A thin python wrapper for the [champion.gg api](api.champion.gg/docs). (Only tested for Python 3)
 
     import champyongg
     
