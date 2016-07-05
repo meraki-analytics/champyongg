@@ -57,7 +57,10 @@ def execute_request(url, method="GET", payload=""):
         request.add_header("User-Agent", "Mozilla/5.0")
         response = urllib.request.urlopen(request)
         content = response.read()
-        content = zlib.decompress(content, zlib.MAX_WBITS | 16).decode(encoding="UTF-8")
+        try:
+            content = content.decode(encoding="UTF-8")
+        except UnicodeDecodeError as error:
+            content = zlib.decompress(content, zlib.MAX_WBITS | 16).decode(encoding="UTF-8")
         return content
     finally:
         if response:

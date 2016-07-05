@@ -53,21 +53,21 @@ class Assists(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0.0)
+        self.val = float(dictionary.get('val', 0.0))
 
 
 class BanRate(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0)
+        self.val = float(dictionary.get('val', 0))
 
 
 class Deaths(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0.0)
+        self.val = float(dictionary.get('val', 0.0))
 
 
 class DamageComposition(champyongg.common.ChampyonGGObject):
@@ -81,35 +81,35 @@ class Experience(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0.0)
+        self.val = float(dictionary.get('val', 0.0))
 
 
 class GoldEarned(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0)
+        self.val = float(dictionary.get('val', 0))
 
 
 class Kills(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0.0)
+        self.val = float(dictionary.get('val', 0.0))
 
 
 class LargestKillingSpree(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0.0)
+        self.val = float(dictionary.get('val', 0.0))
 
 
 class MinionsKilled(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0.0)
+        self.val = float(dictionary.get('val', 0.0))
 
 
 class OverallPosition(champyongg.common.ChampyonGGObject):
@@ -122,47 +122,47 @@ class PlayPercent(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0.0)
+        self.val = float(dictionary.get('val', 0.0))
 
 
 class TotalDamageDealtToChampions(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0)
+        self.val = float(dictionary.get('val', 0))
 
 
 class WinPercent(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0.0)
+        self.val = float(dictionary.get('val', 0.0))
 
 
 class TotalHeal(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0.0)
+        self.val = float(dictionary.get('val', 0.0))
 
 
 class VisionWardsBoughtInGame(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0.0)
+        self.val = float(dictionary.get('val', 0.0))
 
 
 class WardsKilled(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0.0)
+        self.val = float(dictionary.get('val', 0.0))
 
 
 class WardsPlaced(champyongg.common.ChampyonGGObject):
     def __init__(self, dictionary):
         self.change = dictionary.get('change', 0)
         self.position = dictionary.get('position', 0)
-        self.val = dictionary.get('val', 0.0)
+        self.val = float(dictionary.get('val', 0.0))
 
