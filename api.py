@@ -7,6 +7,7 @@ from champyongg.classes.matchup import Matchup
 from champyongg.classes.runeset import RuneSet
 from champyongg.classes.skillset import SkillSet
 from champyongg.classes.summonerspellset import SummonerSpellSet
+from .classes.stats import Stats
 
 
 def set_api_key(key):
@@ -155,6 +156,12 @@ def get_specific_matchup(champion, enemy):
     """
 
     request = '/champion/{name}/matchup/{enemy}'.format(name=champion, enemy=enemy)
-    print(champyongg.requests.get(request))
     return {datum['role']: Matchup(datum) for datum in champyongg.requests.get(request)}
+
+
+def get_stats():
+    """return http://api.champion.gg/stats/overall"""
+
+    request = 'stats/overall'
+    return Stats(champyongg.requests.get(request))
 
