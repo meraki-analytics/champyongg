@@ -37,7 +37,7 @@ def get_general_data(champion):
     """
 
     request = 'champion/{name}/general'.format(name=champion)
-    return {datum['name']: GeneralData(datum) for datum in champyongg.requests.get(request)}
+    return {datum['role']: GeneralData(datum) for datum in champyongg.requests.get(request)}
 
 
 def get_matchups_by_role(champion):
